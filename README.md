@@ -73,14 +73,13 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/AndreaCastanoS/node-mongo-big-file-exercise.git
-   cd tu-repo
-Instalar dependencias:
+   
+ 2. Instalar dependencias:
+```bash
+ npm install
 
-bash
-npm install
+3. Modificar el archivo .env:
 
-Modificar el archivo .env:
-
-
-bash
+4. Correr el proyecto
+```bash
 npm run dev

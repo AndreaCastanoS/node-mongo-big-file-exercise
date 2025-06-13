@@ -59,7 +59,7 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
 
 ---
 
-## ✅ Resultado final
+##  Resultado final
 
 - Se cargaron exitosamente **999.991 registros** en aproximadamente **2 minutos**.
 - El código es limpio, modular, comentado y robusto ante errores de formato.
@@ -68,18 +68,21 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
 
 ---
 
-## 📦 Cómo correr el proyecto
+##  Cómo correr el proyecto
 
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/AndreaCastanoS/node-mongo-big-file-exercise.git
+   ```
    
  2. Instalar dependencias:
 ```bash
  npm install
+```
 
 3. Modificar el archivo .env:
 
 4. Correr el proyecto
 ```bash
 npm run dev
+```

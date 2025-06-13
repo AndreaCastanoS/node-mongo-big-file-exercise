@@ -80,7 +80,7 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
  npm install
 ```
 
-3. Modificar el archivo .env:
+3. Modificar el archivo `.env` para cambiar el puerto y la conexión a la base de datos.
 
 4. Correr el proyecto
 ```bash

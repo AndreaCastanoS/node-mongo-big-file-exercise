@@ -41,10 +41,15 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
 ##  Estrategias de optimización aplicadas
 
  **Streams (`readline`)**  Evita cargar archivos enteros en RAM = Escalabilidad y bajo uso de memoria 
+ 
  **`insertMany` con `{ ordered: false }`** Inserciones rápidas y sin bloqueo secuencial =  Mejora de rendimiento (~10-20%) 
+ 
  **Lotes de 10.000 registros**  Equilibrio entre rendimiento y memoria = Inserciones eficientes
+ 
  **Paralelismo controlado (`Promise.all`)**  Inserciones concurrentes sin saturar recursos = Aumenta el throughput
+ 
  **Eliminación de archivos temporales**  Limpieza automática post-procesamiento = Ahorro de espacio y prevención de errores 
+ 
  **Conteo y validación de líneas malformadas**  Robustez y trazabilidad = Registro de líneas descartadas 
 
 ---
@@ -52,7 +57,9 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
 ## Comparativa de rendimiento
 
  Lectura completa (`readFile`) + insertMany paralelo |  2m 11s | Rápido pero poco escalable (uso alto de RAM) 
+ 
  Lectura con `readline` + insertMany paralelo | 2m 10s | Igual de rápido, con mucha menos memoria 
+ 
  `bulkWrite` con objetos insertOne | 3m 55s | Más lento en este caso, aunque robusto 
 
  **Nota:** El uso de `readline` y paralelismo controlado permite manejar archivos mucho más grandes (300MB+), sin comprometer la estabilidad del sistema.

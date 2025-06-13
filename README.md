@@ -80,7 +80,8 @@ Al finalizar, se elimina el archivo temporal con `fs.promises.unlink`.
  npm install
 ```
 
-3. Modificar el archivo `.env` para cambiar el puerto y la conexión a la base de datos.
+3. Crear un archivo `.env` en la raíz del proyecto copiando el contenido de `.env.example`.
+   Reemplazar las variables con tus valores reales, por ejemplo tu URL de MongoDB.
 
 4. Correr el proyecto
 ```bash
